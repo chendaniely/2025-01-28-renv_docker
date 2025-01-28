@@ -1,0 +1,15 @@
+getwd()
+# install.packages('renv')
+renv::init()
+install.packages("canlang")
+install.packages("dplyr")
+renv::snapshot()
+install.packages("readr")
+library(readr)
+read_csv("data/data.csv")
+renv::snapshot()
+df <- read_csv("data/data.csv")
+df
+df |>
+dplyr::select(first)
+renv::snapshot()
